@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâmpada Interativa</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Lâmpada Interativa</h1>
+    <img id="lampada" src="https://via.placeholder.com/200x300.png?text=Lâmpada+Apagada" alt="Lâmpada Apagada">
+    <br>
+    <button onclick="alternarLampada()">Ligar/Desligar</button>
+
+    <script>
+        let ligada = false; // Estado inicial da lâmpada
+
+        function alternarLampada() {
+            const imgLampada = document.getElementById("lampada");
+
+            if (ligada) {
+                imgLampada.src = "img/lampada apagada.png";
+                imgLampada.alt = "Lâmpada Apagada";
+            } else {
+                imgLampada.src = "img/lampada acesa.png";
+                imgLampada.alt = "Lâmpada Acesa";
+            }
+
+            ligada = !ligada; // Alterna o estado
+        }
+    </script>
+
+</body>
+</html>
